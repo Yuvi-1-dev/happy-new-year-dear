@@ -100,6 +100,9 @@
 </head>
 
 <body>
+<audio id="loveSong" preload="auto">
+    <source src="song.mp3" type="audio/mpeg">
+</audio>
 
 
 
@@ -144,6 +147,16 @@ if (name === "annu") {
         "afterbegin",
         '<img src="her.jpeg" class="her-img" alt="Annu">'
     );
+    const song = document.getElementById("loveSong");
+
+song.pause();
+song.currentTime = 0;
+song.volume = 0.5;
+
+song.play().then(() => {
+    song.currentTime = 0.23;
+});
+
 
     createHearts();
 
@@ -169,3 +182,4 @@ function createHearts() {
 
 </body>
 </html>
+
